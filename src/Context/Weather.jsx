@@ -23,10 +23,6 @@ export const WeatherProvider = (props) => {
         navigator.geolocation.getCurrentPosition((pos) => {
             getWeatherForLoc(pos.coords.latitude, pos.coords.longitude)
                 .then((data) => setData(data))
-                .finally(() => {
-                    navigator.geolocation.getCurrentPosition((pos) => {
-                        getWeatherForLoc(pos.coords.latitude, pos.coords.longitude)})
-                })
         })
     }
 

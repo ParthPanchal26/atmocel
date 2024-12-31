@@ -8,7 +8,6 @@ import { useEffect } from 'react'
 const App = () => {
 
   const weather = useWeather()
-  console.log(weather);
   useEffect(() => {
     weather.fetchUserLoc()
   }, [])
